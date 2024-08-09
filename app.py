@@ -292,22 +292,23 @@ else:
                     st.error(f"Please provide a deadline for {subject}.")
                     st.stop()
 
-            st.write('### Study Information')
-            st.write('**Subjects:**', ', '.join(st.session_state.subjects))
-            st.write('**Available Hours Per Day:**', st.session_state.hours_per_day)
-            st.write('**Deadlines:**', deadlines)
-            st.write('**Difficulties:**', difficulties)
-            st.write('**Priorities:**', priorities)
-            st.write('**Strengths:**', strengths)
-            st.write('**Preferred Start Time:**', st.session_state.start_time.strftime('%I:%M %p'))
-            st.write('**Break Duration:**', f"{st.session_state.break_duration} minutes")
+            #st.write('### Study Information')
+            #st.write('**Subjects:**', ', '.join(st.session_state.subjects))
+            #st.write('**Available Hours Per Day:**', st.session_state.hours_per_day)
+            #st.write('**Deadlines:**', deadlines)
+            #st.write('**Difficulties:**', difficulties)
+            #st.write('**Priorities:**', priorities)
+            #st.write('**Strengths:**', strengths)
+            #st.write('**Preferred Start Time:**', st.session_state.start_time.strftime('%I:%M %p'))
+            #st.write('**Break Duration:**', f"{st.session_state.break_duration} minutes")
 
             # Prioritize tasks
             st.session_state.prioritized_subjects = prioritize_tasks(st.session_state.subjects, deadlines, difficulties,
                                                                      priorities)
             st.write('### Prioritized Subjects')
             for subject, priority in st.session_state.prioritized_subjects:
-                st.write(f"**{subject}:** Priority Level {priority[0]} with difficulty ratio {priority[1]:.2f}")
+                #st.write(f"**{subject}:** Priority Level {priority[0]} with difficulty ratio {priority[1]:.2f}")
+                pass
 
             # Generate and display the schedule using Priority-Based Scheduling
             schedule_priority_based = create_schedule(st.session_state.prioritized_subjects, deadlines,
