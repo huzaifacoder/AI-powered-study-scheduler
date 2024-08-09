@@ -305,7 +305,7 @@ else:
             # Prioritize tasks
             st.session_state.prioritized_subjects = prioritize_tasks(st.session_state.subjects, deadlines, difficulties,
                                                                      priorities)
-            st.write('### Prioritized Subjects')
+            #st.write('### Prioritized Subjects')
             for subject, priority in st.session_state.prioritized_subjects:
                 #st.write(f"**{subject}:** Priority Level {priority[0]} with difficulty ratio {priority[1]:.2f}")
                 pass
