@@ -325,13 +325,13 @@ else:
             st.success("Timetable generated and saved successfully!")
 
             # Button to show saved timetable
-            if st.button('Show Saved Timetable'):
-                st.session_state.timetable_visible = True
+            #if st.button('Show Saved Timetable'):
+                #st.session_state.timetable_visible = True
 
-            if st.session_state.timetable_visible:
-                if os.path.exists('saved_timetable.csv'):
-                    saved_timetable = load_timetable('saved_timetable.csv')
-                    display_regular_timetable(saved_timetable, "Saved Timetable")
+            #if st.session_state.timetable_visible:
+                #if os.path.exists('saved_timetable.csv'):
+                    #saved_timetable = load_timetable('saved_timetable.csv')
+                    #display_regular_timetable(saved_timetable, "Saved Timetable")
 
         except Exception as e:
             st.error(f"Error parsing input: {e}")
